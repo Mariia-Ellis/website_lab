@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Ranges.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">lab</a> &gt; <a href="index.source.html" class="el_package">edu.odu.cs</a> &gt; <span class="el_source">Ranges.java</span></div><h1>Ranges.java</h1><pre class="source lang-java linenums">package edu.odu.cs;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.ListIterator;
+
+/**
+ * An ordered sequence of disjoint (non-overlapping) intervals.   
+ */
+public class Ranges implements Iterable&lt;Interval&gt; {
+
+  LinkedList&lt;Interval&gt; remaining;
+
+  /**
+   * Create a range with no gaps.
+   * 
+   * @param low
+   * @param high
+   */
+<span class="fc" id="L19">  Ranges(double low, double high) {</span>
+<span class="fc" id="L20">    remaining = new LinkedList&lt;&gt;();</span>
+<span class="fc" id="L21">    remaining.add(new Interval(low, high));</span>
+<span class="fc" id="L22">  }</span>
+
+  /**
+   * Remove an interval from the range. E.g., if we start with the
+   * range (0, 10), then subtracting (5,8) would leave all numbers in (0,5) and
+   * (8,10).
+   * 
+   * @param toRemove the range of numbers to subtract
+   */
+  public void remove(Interval toRemove) {
+<span class="fc bfc" id="L32" title="All 2 branches covered.">    if (toRemove.width() == 0.0) {</span>
+<span class="fc" id="L33">      return;</span>
+    }
+<span class="fc" id="L35">    ListIterator&lt;Interval&gt; iter = remaining.listIterator();</span>
+<span class="fc bfc" id="L36" title="All 2 branches covered.">    while (iter.hasNext()) {</span>
+<span class="fc" id="L37">      Interval current = iter.next();</span>
+<span class="pc bpc" id="L38" title="1 of 2 branches missed.">      if (current.getMin() &gt; toRemove.getMax())</span>
+<span class="nc" id="L39">        break;</span>
+<span class="fc" id="L40">      replaceIfOverlapping(toRemove, iter, current);</span>
+<span class="fc" id="L41">    }</span>
+<span class="fc" id="L42">  }</span>
+
+private void replaceIfOverlapping(Interval toRemove, ListIterator&lt;Interval&gt; iter, Interval current) {
+<span class="fc bfc" id="L45" title="All 2 branches covered.">	if (current.overlaps((toRemove))) {</span>
+<span class="fc" id="L46">        replaceOverlappingInterval(toRemove, iter, current);</span>
+      }
+<span class="fc" id="L48">}</span>
+
+private void replaceOverlappingInterval(Interval toRemove, ListIterator&lt;Interval&gt; iter, Interval current) {
+<span class="fc" id="L51">	Interval lowerPart = current.below(toRemove.getMin());</span>
+<span class="fc" id="L52">	Interval upperPart = current.above(toRemove.getMax());</span>
+<span class="fc" id="L53">	iter.remove();</span>
+<span class="fc" id="L54">	addIfNonEmpty(iter, lowerPart);</span>
+<span class="fc" id="L55">	addIfNonEmpty(iter, upperPart);</span>
+<span class="fc" id="L56">}</span>
+
+private void addIfNonEmpty(ListIterator&lt;Interval&gt; interval, Interval lowerPart) {
+<span class="fc bfc" id="L59" title="All 2 branches covered.">	if (lowerPart.width() &gt; 0.0) {</span>
+<span class="fc" id="L60">	  interval.add(lowerPart);</span>
+	}
+<span class="fc" id="L62">}</span>
+
+  /**
+   * The sum of the widths of all remaining intervals on the number line.
+   * 
+   * @return the sum
+   */
+  public double sum() {
+<span class="fc" id="L70">    double total = 0.0;</span>
+<span class="fc bfc" id="L71" title="All 2 branches covered.">    for (Interval interval : remaining) {</span>
+<span class="fc" id="L72">      total += interval.width();</span>
+<span class="fc" id="L73">    }</span>
+<span class="fc" id="L74">    return total;</span>
+  }
+
+  
+  /**
+   * For debugging purposes. Contents and format are not specified.
+   */
+  public String toString() {
+<span class="nc" id="L82">    return remaining.toString();</span>
+  }
+
+  /**
+   * Allow iteration over the remaining intervals. Intervals will be disjoint and
+   * will be presented in ascending order of starting position.
+   * 
+   * @return an iterator for the remaining intervals
+   */
+  public Iterator&lt;Interval&gt; iterator() {
+<span class="fc" id="L92">    return remaining.iterator();</span>
+  }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
