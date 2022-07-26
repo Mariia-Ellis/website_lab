@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.7.1" sequence="0" timestamp="1658876045394" analysisTimestamp="1658876045394" release="">
+  <Project projectName="lab (spotbugsMain)">
+    <Jar>/Users/mariiavorobeva/Desktop/lab/LAB/build/classes/java/main/edu/odu/cs/Highway.class</Jar>
+    <Jar>/Users/mariiavorobeva/Desktop/lab/LAB/build/classes/java/main/edu/odu/cs/Interval.class</Jar>
+    <Jar>/Users/mariiavorobeva/Desktop/lab/LAB/build/classes/java/main/edu/odu/cs/Ranges.class</Jar>
+    <SrcDir>/Users/mariiavorobeva/Desktop/lab/LAB/src/main/resources</SrcDir>
+    <SrcDir>/Users/mariiavorobeva/Desktop/lab/LAB/src/main/java</SrcDir>
+  </Project>
+  <BugInstance type="DM_DEFAULT_ENCODING" priority="1" rank="19" abbrev="Dm" category="I18N" instanceHash="1694600fac16585fe574614953971557" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Reliance on default encoding</ShortMessage>
+    <LongMessage>Found reliance on default encoding in edu.odu.cs.Highway.doIt(InputStream): new java.util.Scanner(InputStream)</LongMessage>
+    <Class classname="edu.odu.cs.Highway" primary="true">
+      <SourceLine classname="edu.odu.cs.Highway" start="10" end="44" sourcefile="Highway.java" sourcepath="edu/odu/cs/Highway.java" relSourcepath="java/edu/odu/cs/Highway.java">
+        <Message>At Highway.java:[lines 10-44]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.Highway</Message>
+    </Class>
+    <Method classname="edu.odu.cs.Highway" name="doIt" signature="(Ljava/io/InputStream;)V" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.Highway" start="28" end="44" startBytecode="0" endBytecode="404" sourcefile="Highway.java" sourcepath="edu/odu/cs/Highway.java" relSourcepath="java/edu/odu/cs/Highway.java"/>
+      <Message>In method edu.odu.cs.Highway.doIt(InputStream)</Message>
+    </Method>
+    <Method classname="java.util.Scanner" name="&lt;init&gt;" signature="(Ljava/io/InputStream;)V" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Scanner" start="567" end="568" startBytecode="0" endBytecode="71" sourcefile="Scanner.java" sourcepath="java/util/Scanner.java"/>
+      <Message>Called method new java.util.Scanner(InputStream)</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.Highway" primary="true" start="28" end="28" startBytecode="5" endBytecode="5" sourcefile="Highway.java" sourcepath="edu/odu/cs/Highway.java" relSourcepath="java/edu/odu/cs/Highway.java">
+      <Message>At Highway.java:[line 28]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugInstance type="HE_EQUALS_USE_HASHCODE" priority="1" rank="14" abbrev="HE" category="BAD_PRACTICE" instanceHash="13583b610114e992526b7690cd6f0744" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Class defines equals() and uses Object.hashCode()</ShortMessage>
+    <LongMessage>edu.odu.cs.Interval defines equals and uses Object.hashCode()</LongMessage>
+    <Class classname="edu.odu.cs.Interval" primary="true">
+      <SourceLine classname="edu.odu.cs.Interval" start="19" end="131" sourcefile="Interval.java" sourcepath="edu/odu/cs/Interval.java" relSourcepath="java/edu/odu/cs/Interval.java">
+        <Message>At Interval.java:[lines 19-131]</Message>
+      </SourceLine>
+      <Message>In class edu.odu.cs.Interval</Message>
+    </Class>
+    <Method classname="edu.odu.cs.Interval" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" primary="true">
+      <SourceLine classname="edu.odu.cs.Interval" start="117" end="123" startBytecode="0" endBytecode="161" sourcefile="Interval.java" sourcepath="edu/odu/cs/Interval.java" relSourcepath="java/edu/odu/cs/Interval.java" synthetic="true"/>
+      <Message>In method edu.odu.cs.Interval.equals(Object)</Message>
+    </Method>
+    <SourceLine classname="edu.odu.cs.Interval" start="117" end="123" startBytecode="0" endBytecode="161" sourcefile="Interval.java" sourcepath="edu/odu/cs/Interval.java" relSourcepath="java/edu/odu/cs/Interval.java" synthetic="true">
+      <Message>At Interval.java:[lines 117-123]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="BAD_PRACTICE">
+    <Description>Bad practice</Description>
+  </BugCategory>
+  <BugCategory category="I18N">
+    <Description>Internationalization</Description>
+  </BugCategory>
+  <BugPattern type="DM_DEFAULT_ENCODING" abbrev="Dm" category="I18N">
+    <ShortDescription>Reliance on default encoding</ShortDescription>
+    <Details><![CDATA[
+
+<p> Found a call to a method which will perform a byte to String (or String to byte) conversion,
+and will assume that the default platform encoding is suitable. This will cause the application
+behavior to vary between platforms. Use an alternative API and specify a charset name or Charset
+object explicitly.</p>
+
+      ]]></Details>
+  </BugPattern>
+  <BugPattern type="HE_EQUALS_USE_HASHCODE" abbrev="HE" category="BAD_PRACTICE">
+    <ShortDescription>Class defines equals() and uses Object.hashCode()</ShortDescription>
+    <Details><![CDATA[
+
+  <p> This class overrides <code>equals(Object)</code>, but does not
+  override <code>hashCode()</code>, and inherits the implementation of
+  <code>hashCode()</code> from <code>java.lang.Object</code> (which returns
+  the identity hash code, an arbitrary value assigned to the object
+  by the VM).&nbsp; Therefore, the class is very likely to violate the
+  invariant that equal objects must have equal hashcodes.</p>
+
+<p>If you don't think instances of this class will ever be inserted into a HashMap/HashTable,
+the recommended <code>hashCode</code> implementation to use is:</p>
+<pre><code>public int hashCode() {
+    assert false : "hashCode not designed";
+    return 42; // any arbitrary constant will do
+}
+</code></pre>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="Dm">
+    <Description>Dubious method used</Description>
+  </BugCode>
+  <BugCode abbrev="HE">
+    <Description>Equal objects must have equal hashcodes</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Tue, 26 Jul 2022 18:54:05 -0400" total_classes="0" referenced_classes="0" total_bugs="2" total_size="0" num_packages="1" java_version="18.0.1.1" vm_version="18.0.1.1+2-6" cpu_seconds="11.27" clock_seconds="3.79" peak_mbytes="152.75" alloc_mbytes="2048.00" gc_seconds="0.04" priority_1="2">
+    <FileStats path="edu/odu/cs/Highway.java" bugCount="1" size="0" bugHash="5233a2f61e992c0bc292582725a343bb"/>
+    <FileStats path="edu/odu/cs/Interval.java" bugCount="1" size="0" bugHash="018cc26c27c9cbce5912de33928cc7cc"/>
+    <FindBugsProfile></FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

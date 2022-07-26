@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd"
+    version="6.21.0" timestamp="2022-07-26T18:54:02.857">
+<file name="/Users/mariiavorobeva/Desktop/lab/LAB/src/main/java/edu/odu/cs/Highway.java">
+<violation beginline="10" endline="46" begincolumn="8" endcolumn="1" rule="AtLeastOneConstructor" ruleset="Code Style" package="edu.odu.cs" class="Highway" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#atleastoneconstructor" priority="3">
+Each class should declare at least one constructor
+</violation>
+<violation beginline="18" endline="18" begincolumn="27" endcolumn="39" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="main" variable="args" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'args' is not assigned and could be declared final
+</violation>
+<violation beginline="22" endline="22" begincolumn="60" endcolumn="74" rule="AvoidFileStream" ruleset="Performance" package="edu.odu.cs" class="Highway" method="main" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_performance.html#avoidfilestream" priority="1">
+Avoid instantiating FileInputStream, FileOutputStream, FileReader, or FileWriter
+</violation>
+<violation beginline="22" endline="22" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="main" variable="in" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like in
+</violation>
+<violation beginline="22" endline="22" begincolumn="27" endcolumn="28" rule="CloseResource" ruleset="Error Prone" package="edu.odu.cs" class="Highway" method="main" variable="in" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#closeresource" priority="3">
+Ensure that resources like this BufferedInputStream object are closed after use
+</violation>
+<violation beginline="22" endline="22" begincolumn="7" endcolumn="94" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="main" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'in' could be declared final
+</violation>
+<violation beginline="27" endline="27" begincolumn="33" endcolumn="34" rule="AvoidPrefixingMethodParameters" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="in" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#avoidprefixingmethodparameters" priority="4">
+Avoid prefixing parameters by in, out or inOut. Uses Javadoc to document this behavior.
+</violation>
+<violation beginline="27" endline="27" begincolumn="33" endcolumn="34" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="in" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like in
+</violation>
+<violation beginline="27" endline="27" begincolumn="21" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="in" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'in' is not assigned and could be declared final
+</violation>
+<violation beginline="28" endline="28" begincolumn="5" endcolumn="35" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'input' could be declared final
+</violation>
+<violation beginline="29" endline="29" begincolumn="5" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'xMin' could be declared final
+</violation>
+<violation beginline="30" endline="30" begincolumn="5" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'xMax' could be declared final
+</violation>
+<violation beginline="31" endline="31" begincolumn="5" endcolumn="21" rule="SystemPrintln" ruleset="Best Practices" package="edu.odu.cs" class="Highway" method="doIt" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.printf is used
+</violation>
+<violation beginline="32" endline="32" begincolumn="5" endcolumn="40" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'gaps' could be declared final
+</violation>
+<violation beginline="34" endline="34" begincolumn="14" endcolumn="15" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="x0" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like x0
+</violation>
+<violation beginline="34" endline="34" begincolumn="7" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'x0' could be declared final
+</violation>
+<violation beginline="35" endline="35" begincolumn="14" endcolumn="15" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="x1" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like x1
+</violation>
+<violation beginline="35" endline="35" begincolumn="7" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'x1' could be declared final
+</violation>
+<violation beginline="36" endline="36" begincolumn="26" endcolumn="45" rule="AvoidInstantiatingObjectsInLoops" ruleset="Performance" package="edu.odu.cs" class="Highway" method="doIt" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_performance.html#avoidinstantiatingobjectsinloops" priority="3">
+Avoid instantiating new objects inside loops
+</violation>
+<violation beginline="36" endline="36" begincolumn="7" endcolumn="45" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'covered' could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="5" endcolumn="33" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'uncovered' could be declared final
+</violation>
+<violation beginline="40" endline="40" begincolumn="5" endcolumn="21" rule="SystemPrintln" ruleset="Best Practices" package="edu.odu.cs" class="Highway" method="doIt" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.printf is used
+</violation>
+<violation beginline="41" endline="41" begincolumn="5" endcolumn="68" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Highway" method="doIt" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'pct' could be declared final
+</violation>
+<violation beginline="42" endline="42" begincolumn="5" endcolumn="21" rule="SystemPrintln" ruleset="Best Practices" package="edu.odu.cs" class="Highway" method="doIt" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#systemprintln" priority="2">
+System.out.printf is used
+</violation>
+</file>
+<file name="/Users/mariiavorobeva/Desktop/lab/LAB/src/main/java/edu/odu/cs/Interval.java">
+<violation beginline="10" endline="10" begincolumn="18" endcolumn="20" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs" class="Interval" variable="low" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="10" endline="10" begincolumn="18" endcolumn="20" rule="ImmutableField" ruleset="Design" package="edu.odu.cs" class="Interval" variable="low" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'low' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="11" endline="11" begincolumn="18" endcolumn="21" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs" class="Interval" variable="high" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="11" endline="11" begincolumn="18" endcolumn="21" rule="ImmutableField" ruleset="Design" package="edu.odu.cs" class="Interval" variable="high" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#immutablefield" priority="3">
+Private field 'high' could be made final; it is only initialized in the declaration or constructor.
+</violation>
+<violation beginline="19" endline="19" begincolumn="31" endcolumn="40" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="Interval" variable="max" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'max' is not assigned and could be declared final
+</violation>
+<violation beginline="19" endline="19" begincolumn="19" endcolumn="28" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="Interval" variable="min" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'min' is not assigned and could be declared final
+</violation>
+<violation beginline="39" endline="39" begincolumn="34" endcolumn="34" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="contains" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like d
+</violation>
+<violation beginline="39" endline="39" begincolumn="27" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="contains" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'd' is not assigned and could be declared final
+</violation>
+<violation beginline="49" endline="49" begincolumn="36" endcolumn="36" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="overlaps" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like x
+</violation>
+<violation beginline="49" endline="49" begincolumn="27" endcolumn="36" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="overlaps" variable="x" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'x' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="7" endcolumn="19" rule="OnlyOneReturn" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="overlaps" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="70" endline="74" begincolumn="5" endcolumn="5" rule="ConfusingTernary" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="getMin" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#confusingternary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="82" endline="86" begincolumn="5" endcolumn="5" rule="ConfusingTernary" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="getMax" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#confusingternary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="96" endline="96" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="below" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like d
+</violation>
+<violation beginline="96" endline="96" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="below" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'd' is not assigned and could be declared final
+</violation>
+<violation beginline="107" endline="107" begincolumn="32" endcolumn="32" rule="ShortVariable" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="above" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#shortvariable" priority="3">
+Avoid variables with short names like d
+</violation>
+<violation beginline="107" endline="107" begincolumn="25" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="above" variable="d" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'd' is not assigned and could be declared final
+</violation>
+<violation beginline="116" endline="116" begincolumn="18" endcolumn="35" rule="OverrideBothEqualsAndHashcode" ruleset="Error Prone" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#overridebothequalsandhashcode" priority="3">
+Ensure you override both equals() and hashCode()
+</violation>
+<violation beginline="116" endline="116" begincolumn="25" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" variable="obj" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'obj' is not assigned and could be declared final
+</violation>
+<violation beginline="116" endline="125" begincolumn="10" endcolumn="3" rule="MissingOverride" ruleset="Best Practices" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'equals(Object)' is missing an @Override annotation.
+</violation>
+<violation beginline="118" endline="118" begincolumn="7" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'other' could be declared final
+</violation>
+<violation beginline="119" endline="120" begincolumn="7" endcolumn="20" rule="IfStmtsMustUseBraces" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#ifstmtsmustusebraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="119" endline="119" begincolumn="22" endcolumn="34" rule="LawOfDemeter" ruleset="Design" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="120" endline="120" begincolumn="9" endcolumn="20" rule="OnlyOneReturn" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="120" endline="120" begincolumn="9" endcolumn="20" rule="ControlStatementBraces" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#controlstatementbraces" priority="3">
+This statement should have braces
+</violation>
+<violation beginline="121" endline="121" begincolumn="7" endcolumn="56" rule="OnlyOneReturn" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#onlyonereturn" priority="3">
+A method should have only one exit point, and that should be the last statement in the method
+</violation>
+<violation beginline="121" endline="121" begincolumn="15" endcolumn="30" rule="UselessParentheses" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="121" endline="121" begincolumn="37" endcolumn="54" rule="UselessParentheses" ruleset="Code Style" package="edu.odu.cs" class="Interval" method="equals" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="130" endline="132" begincolumn="10" endcolumn="3" rule="MissingOverride" ruleset="Best Practices" package="edu.odu.cs" class="Interval" method="toString" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'toString()' is missing an @Override annotation.
+</violation>
+</file>
+<file name="/Users/mariiavorobeva/Desktop/lab/LAB/src/main/java/edu/odu/cs/Ranges.java">
+<violation beginline="11" endline="11" begincolumn="3" endcolumn="22" rule="LooseCoupling" ruleset="Best Practices" package="edu.odu.cs" class="Ranges" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#loosecoupling" priority="3">
+Avoid using implementation types like 'LinkedList'; use the interface instead
+</violation>
+<violation beginline="11" endline="11" begincolumn="24" endcolumn="32" rule="BeanMembersShouldSerialize" ruleset="Error Prone" package="edu.odu.cs" class="Ranges" variable="remaining" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#beanmembersshouldserialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="11" endline="11" begincolumn="3" endcolumn="33" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="edu.odu.cs" class="Ranges" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+To avoid mistakes add a comment at the beginning of the remaining field if you want a default access modifier
+</violation>
+<violation beginline="11" endline="11" begincolumn="3" endcolumn="33" rule="DefaultPackage" ruleset="Code Style" package="edu.odu.cs" class="Ranges" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#defaultpackage" priority="3">
+Use explicit scoping instead of the default package private level
+</violation>
+<violation beginline="19" endline="19" begincolumn="22" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="Ranges" variable="high" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'high' is not assigned and could be declared final
+</violation>
+<violation beginline="19" endline="19" begincolumn="10" endcolumn="19" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="Ranges" variable="low" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'low' is not assigned and could be declared final
+</violation>
+<violation beginline="19" endline="22" begincolumn="3" endcolumn="3" rule="CommentDefaultAccessModifier" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="Ranges" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#commentdefaultaccessmodifier" priority="3">
+To avoid mistakes add a comment at the beginning of the Ranges constructor if you want a default access modifier
+</violation>
+<violation beginline="31" endline="31" begincolumn="22" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="remove" variable="toRemove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'toRemove' is not assigned and could be declared final
+</violation>
+<violation beginline="32" endline="32" begincolumn="29" endcolumn="31" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs" class="Ranges" method="remove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="35" endline="35" begincolumn="5" endcolumn="58" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="remove" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'iter' could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="7" endcolumn="36" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="remove" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'current' could be declared final
+</violation>
+<violation beginline="38" endline="39" begincolumn="7" endcolumn="14" rule="IfStmtsMustUseBraces" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="remove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#ifstmtsmustusebraces" priority="3">
+Avoid using if statements without curly braces
+</violation>
+<violation beginline="38" endline="38" begincolumn="11" endcolumn="26" rule="LawOfDemeter" ruleset="Design" package="edu.odu.cs" class="Ranges" method="remove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_design.html#lawofdemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="39" endline="39" begincolumn="9" endcolumn="14" rule="ControlStatementBraces" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="remove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#controlstatementbraces" priority="3">
+This statement should have braces
+</violation>
+<violation beginline="44" endline="44" begincolumn="83" endcolumn="98" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceIfOverlapping" variable="current" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'current' is not assigned and could be declared final
+</violation>
+<violation beginline="44" endline="44" begincolumn="54" endcolumn="80" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceIfOverlapping" variable="iter" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'iter' is not assigned and could be declared final
+</violation>
+<violation beginline="44" endline="44" begincolumn="35" endcolumn="51" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceIfOverlapping" variable="toRemove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'toRemove' is not assigned and could be declared final
+</violation>
+<violation beginline="45" endline="45" begincolumn="31" endcolumn="38" rule="UselessParentheses" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceIfOverlapping" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
+Useless parentheses.
+</violation>
+<violation beginline="50" endline="50" begincolumn="89" endcolumn="104" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceOverlappingInterval" variable="current" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'current' is not assigned and could be declared final
+</violation>
+<violation beginline="50" endline="50" begincolumn="60" endcolumn="86" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceOverlappingInterval" variable="iter" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'iter' is not assigned and could be declared final
+</violation>
+<violation beginline="50" endline="50" begincolumn="41" endcolumn="57" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceOverlappingInterval" variable="toRemove" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'toRemove' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="9" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceOverlappingInterval" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'lowerPart' could be declared final
+</violation>
+<violation beginline="52" endline="52" begincolumn="9" endcolumn="61" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="replaceOverlappingInterval" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'upperPart' could be declared final
+</violation>
+<violation beginline="58" endline="58" begincolumn="28" endcolumn="58" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="addIfNonEmpty" variable="interval" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'interval' is not assigned and could be declared final
+</violation>
+<violation beginline="58" endline="58" begincolumn="61" endcolumn="78" rule="MethodArgumentCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="addIfNonEmpty" variable="lowerPart" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#methodargumentcouldbefinal" priority="3">
+Parameter 'lowerPart' is not assigned and could be declared final
+</violation>
+<violation beginline="59" endline="59" begincolumn="33" endcolumn="35" rule="AvoidLiteralsInIfCondition" ruleset="Error Prone" package="edu.odu.cs" class="Ranges" method="addIfNonEmpty" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_errorprone.html#avoidliteralsinifcondition" priority="3">
+Avoid using Literals in Conditional Statements
+</violation>
+<violation beginline="71" endline="71" begincolumn="10" endcolumn="26" rule="LocalVariableCouldBeFinal" ruleset="Code Style" package="edu.odu.cs" class="Ranges" method="sum" variable="VariableDeclaratorId" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_codestyle.html#localvariablecouldbefinal" priority="3">
+Local variable 'interval' could be declared final
+</violation>
+<violation beginline="81" endline="83" begincolumn="10" endcolumn="3" rule="MissingOverride" ruleset="Best Practices" package="edu.odu.cs" class="Ranges" method="toString" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'toString()' is missing an @Override annotation.
+</violation>
+<violation beginline="91" endline="93" begincolumn="10" endcolumn="3" rule="MissingOverride" ruleset="Best Practices" package="edu.odu.cs" class="Ranges" method="iterator" externalInfoUrl="https://pmd.github.io/pmd-6.21.0/pmd_rules_java_bestpractices.html#missingoverride" priority="3">
+The method 'iterator()' is missing an @Override annotation.
+</violation>
+</file>
+<configerror rule="LoosePackageCoupling" msg="No packages or classes specified"/>
+</pmd>
